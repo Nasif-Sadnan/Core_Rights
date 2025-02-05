@@ -1,0 +1,36 @@
+<?php session_start();?> 
+
+<html>
+    <head>
+        <title>Login control Panel</title></head>
+        <?php include '../Model/VLN_Db.php';?>
+ 
+    <body>
+        <?php
+       
+        $db = new mydb();
+        $con = $db->openCon();
+ 
+ 
+        $result = $db->loginUser(
+            $con,
+            'volunteer',
+            $_POST["VLN_ID"],
+            $_POST["VLN_password"]
+        );
+ 
+        if ($result && $result->num_rows > 0) {
+
+            $user = $result->fetch_assoc();
+
+            $_SESSION["VLN_ID"]=$user["VLN_ID"];
+            header("Location: ../View/Home.php"); // Redirect to success page
+            exit();
+        } else {
+            echo "Database Error: " . $con->error;
+        }
+         
+    ?>
+ 
+ 
+    </body>

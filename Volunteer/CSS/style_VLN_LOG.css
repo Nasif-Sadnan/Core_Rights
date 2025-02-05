@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f7fa;
+}
+
+.container {
+    display: flex;
+    width: 1300px;
+    height: 700px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.left-section {
+    width: 50%;
+    background: url('../Images/login.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.Volunteer {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    color: white;
+}
+
+.Volunteer h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.Volunteer p {
+    font-size: 1.2rem;
+}
+
+.right-section {
+    width: 50%;
+    background-color: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.right-section h2 {
+    color: #00a5e0;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00a5e0;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.reset-btn {
+    background-color: #f44336;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #00a5e0;
+    font-size: 1rem;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

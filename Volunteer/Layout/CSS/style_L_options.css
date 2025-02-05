@@ -1,0 +1,143 @@
+/* style_L_options.css */
+
+.OPT {
+  top: 0;
+  margin: 0; /* Reset any margin */
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*height: 100vh; /* Ensure it takes up the full viewport height */
+  box-sizing: border-box; /* Include padding and border in height calculation */
+}
+
+  
+  .top_head {
+    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .top_head h1 {
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .login_opt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .top, .down {
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* Increased gap for spacing */
+    margin: 20px 0;
+  }
+  
+  .VIC, .VLN, .REP, .MIN, .AD {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f5f7fa;
+    border-radius: 15px; /* rounded corners */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    width: 200px; /*  increased width */
+    height: 200px; /*  increased height */
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .VIC:hover, .VLN:hover, .REP:hover, .MIN:hover, .AD:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+  }
+  
+  img.src {
+    width: 100px; 
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+
+  
+.navbar{
+  padding-right: 20px;
+  font-family: calibri;
+  position: sticky;
+  top: 0;
+  margin-bottom: -10px;
+}
+
+.navdiv {
+  position: relative; /* Allows the absolutely positioned logo to be placed relative to this container */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  margin-left: 30px;
+  margin-right: 50px;
+}
+.L_image {
+  
+  max-width: 120px; 
+}
+
+
+.search{
+  height: 40px;
+  width: max-content;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+  border-radius: 28px;
+  background: #f1f1f1;
+  border-color: #333333;
+}
+
+.search-input{
+  font-size: 16px;
+  color: #333333;
+  margin-left: 15px;
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 300px;
+}
+
+.search-input::placeholder , .search-icon{
+  color: rgba(0, 0, 0, .25);
+}
+
+
+
+
+.navdiv li{
+  list-style: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.navdiv li a{
+  color: #333333;
+  font-size: 20px;
+  margin-right: 40px; 
+  text-decoration: none;  
+}

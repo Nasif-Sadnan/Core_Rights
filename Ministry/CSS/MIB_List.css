@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+.Min_List {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.Min_List h2 {
+    text-align: center;
+}
+
+.Min_List table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.Min_List th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.Min_List th {
+    background: #007bff;
+    color: white;
+}
+
+.Min_List .dt_TR_Min {
+    height: 100px;
+}
+
+.Min_List tr:hover {
+    background: #ddd;
+}
+
+.Min_List form {
+    margin-top: 10px;
+}
+
+.Min_List input[type="submit"] {
+    padding: 5px 10px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.Min_List input[type="submit"]:hover {
+    background: #e60000;
+}
