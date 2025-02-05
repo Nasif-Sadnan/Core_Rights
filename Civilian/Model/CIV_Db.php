@@ -36,7 +36,7 @@ class mydb {
             $allowPP
         );
         
-        session_start();
+        
         $stmt->execute();
         $VIC_ID = $conObj->insert_id;
         $_SESSION["VIC_ID"]= $VIC_ID ;
@@ -45,14 +45,14 @@ class mydb {
 
         $queryUser = "INSERT INTO user_data 
         (VIC_ID, U_Email, U_DOB, U_Gender, U_L_Name, U_F_Name, U_Contact_No,U_Division, U_District,U_Address,U_NID,U_Image) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
         $stmtUser = $conObj->prepare($queryUser);
         if (!$stmtUser) {
             die("Error preparing user_data query: " . $conObj->error);
         }
         
         $stmtUser->bind_param(
-            "isssssisssi",
+            "isssssisssis",
             $VIC_ID, 
             $CIV_email, 
             $CIV_dob, 
@@ -179,7 +179,7 @@ class mydb {
             $stmtUser->close();
             return $result;
     }
-    
+
     function submitcase($conObj,$VIC_ID,$description,$COM_Time_Occured,$COM_Victim,$COM_Opponent,$COM_Place,$COM_Division,$COM_District)
     {
         $db = new mydb();

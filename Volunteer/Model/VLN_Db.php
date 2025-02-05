@@ -119,6 +119,43 @@ class mydb {
         $stmt->close();
     }
     
+    function Get_Limited_Data($conObj) {
+        $querystring = "SELECT victim.*, user_data.U_Email, user_data.U_DOB, user_data.U_Gender, user_data.U_L_Name, user_data.U_F_Name, user_data.U_Contact_No 
+        FROM victim 
+        LEFT JOIN user_data ON victim.VIC_ID = user_data.VIC_ID 
+        ORDER BY victim.VIC_ID, user_data.U_L_Name 
+        LIMIT 10";
+        
+        $result = $conObj->query($querystring);
 
+        if ($result->num_rows > 0) {
+            return $result;
+        } else {
+            return null;
+        }
+    }
+    
+    function getuserbylike($conObj,$search) 
+    {
+        
+        $querystring = "SELECT victim.*, user_data.U_Email, user_data.U_DOB, user_data.U_Gender, user_data.U_L_Name, user_data.U_F_Name, user_data.U_Contact_No 
+        FROM victim 
+        LEFT JOIN user_data ON victim.VIC_ID = user_data.VIC_ID                   
+        WHERE victim.VIC_ID LIKE ?";         
+        $stmt = $conObj->prepare($querystring);     
+        if (!$stmt) 
+        {         
+            die("Error preparing query: " . $conObj->error);    
+         }     
+
+         $stmt->bind_param("i", $search);     
+         $stmt->execute();     
+         $result = $stmt->get_result(); 
+         $stmt->close(); 
+         return $result;
+    }
+    function closeCon($conObj) {
+        $conObj->close();
+    }
     }
 ?>

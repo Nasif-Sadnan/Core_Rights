@@ -57,7 +57,7 @@
       </div>
       <nav class="menu">
         <a href="#" onclick="ShowAbout()">About</a>
-        <a href="#" onclick="ShowComplain()">Problems</a>
+        <a href="#" onclick="showuser()">search user</a>
         <a href="#" onclick="ShowUser()">All User</a>
         <a href="#" onclick="ShowMin()">Ministry</a>
         <a href="../Control/Session_Destroy.php">logout</a>
@@ -77,7 +77,16 @@
         <?php include 'ALL_MIN.php'; ?>
       </div>
 
-      
+      <div class="allcm" id="allcm" onclick="showALL()">
+        <?php include '../Control/view_ByLimit.php'; ?>
+      </div>
+
+      <form method="POST" action="../Control/User_like.php">
+       
+        Search by ID: <input type="text" name="search">
+        <button type="submit" name="view_like">View by LIKE (ID)</button>
+         
+    </form>
       
     </div>
 

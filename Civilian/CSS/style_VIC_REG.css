@@ -22,15 +22,6 @@ body {
 }
 
 
-.form-left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f7f9fc;
-    border-right: 2px solid #4a90e2;
-    padding: 10px;
-}
-
 .civ-reg {
     width: 100%;
     max-width: 300px;

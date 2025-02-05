@@ -65,6 +65,15 @@ function checkPassword() {
     }
 }
 
+function Show_Pass() {
+    var x = document.getElementById("VLN_password");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+
 function checkDivision() 
 {
     var divisionSelect = document.getElementById("divisionSelect");

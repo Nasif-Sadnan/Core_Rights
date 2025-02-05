@@ -290,7 +290,7 @@
 
             if ($result) {
                 $_SESSION["email"]=$_POST["CIV_email"];
-                header("Location: ../Control/Send_Mail.php");
+                header("Location: ../view/login.php");
 
                 exit();
             } else {

@@ -1,11 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     background: white;
-    margin: 0;
-    padding: 0;
 }
 
-.Min_List {
+.VLN_Container {
     width: 80%;
     margin: auto;
     padding: 20px;
@@ -15,31 +13,28 @@ body {
     margin-top: 30px;
 }
 
-.Min_List h2 {
+.VLN_Container h2 {
     text-align: center;
 }
 
-.Min_List table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.Min_List th, td {
+.VLN_Container .victim-info {
     padding: 10px;
     border: 1px solid #ddd;
-    text-align: left;
+    margin-top: 10px;
+    background: #f9f9f9;
 }
 
-.Min_List th {
-    background: #007bff;
-    color: white;
+.VLN_Container .victim-info img {
+    width: 80px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: white;
 }
 
-.Min_List .dt_TR_Min {
+.VLN_Container .dt_TR_VLN {
     height: 100px;
 }
 
-.Min_List tr:hover {
+.VLN_Container tr:hover {
     background: #ddd;
 }

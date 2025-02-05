@@ -6,9 +6,7 @@
 <body>
     <div class="container">
         
-        <div class="form-left">
-            <img src="../Images/Civ_Reg.jpg" class="civ-reg" alt="Civilian Registration">
-        </div>
+        
         
         
         <div class="form-container">
